@@ -30,7 +30,15 @@ booldf = df > 0
 # print(df[df['Z'] < 0])
 resultdf = df[df['W'] > 0]
 # print(resultdf['X'])
-print(df[df['W'] > 0][['Y', 'X']])
+# print(df[df['W'] > 0][['Y', 'X']])
 boolser = df['W'] > 0
 result = df[boolser]
-print(result)
+mycols = ['Y', 'X']
+# print(result[mycols])
+print(df)
+# print(df[(df['W'] > 0) & (df['Y'] > 1)])
+# print(df.reset_index())
+newind = 'CA NY WY OR CO'.split()
+df['states'] = newind
+# print(df.set_index('states'))
+
